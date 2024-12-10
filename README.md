@@ -13,3 +13,13 @@
 
 ### Commands
 - ``pnpm create sanity@latest -y --template clean --create-project "Portfolio CMS" --dataset production --output-path cms --package-manager pnpm``
+
+
+---
+## Next.js Frontend
+### Docs
+- https://nextjs.org/learn
+- https://nextjs.org/learn/dashboard-app/getting-started
+
+### Commands
+- ``pnpm create create-next-app@latest frontend --ts --tailwind --eslint --app --src-dir --turbopack --import-alias "@/*" --disable-git``
