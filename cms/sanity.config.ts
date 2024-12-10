@@ -1,14 +1,14 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { defineConfig } from 'sanity'
+import { structureTool } from 'sanity/structure'
+import { visionTool } from '@sanity/vision'
+import { schemaTypes } from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
   title: 'Portfolio CMS',
 
-  projectId: 'ettt9pum',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_API_PROJECT_ID || '',
+  dataset: process.env.SANITY_STUDIO_API_DATASET || '',
 
   plugins: [structureTool(), visionTool()],
 
