@@ -4,7 +4,7 @@ const eslintConfigFrontend = [
   {
     ignores: ["**/.next/"],
   },
-  ...tailwind.configs["flat/recommended"]
-]
+  ...tailwind.configs["flat/recommended"],
+];
 
 export { eslintConfigFrontend };

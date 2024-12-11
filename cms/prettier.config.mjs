@@ -1,4 +1,4 @@
-import rootConfig from '../prettier.config.mjs';
+import rootConfig from "../prettier.config.mjs";
 
 export default {
   ...rootConfig,
