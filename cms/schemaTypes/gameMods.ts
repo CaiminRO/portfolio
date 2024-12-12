@@ -58,7 +58,7 @@ export default defineType({
       name: "downloadLink",
       title: "Download Link(s)",
       type: "array",
-      of: [{ type: "url", }],
+      of: [{ type: "url" }],
       validation: (rule) => rule.required(),
     }),
     defineField({
