@@ -9,7 +9,7 @@ export default defineType({
       name: "title",
       title: "Title",
       type: "string",
-      validation: rule => rule.required().max(50),
+      validation: (rule) => rule.required().max(50),
     }),
     defineField({
       name: "slug",
@@ -17,22 +17,22 @@ export default defineType({
       type: "slug",
       options: {
         source: "title",
-        slugify: value => value.toLowerCase().replace(/\s+/g, '-').slice(0, 32),
+        slugify: (value) => value.toLowerCase().replace(/\s+/g, "-").slice(0, 32),
       },
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "description",
       title: "Description",
       type: "text",
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "technologies",
       title: "Technologies Used",
       type: "array",
       of: [{ type: "string" }],
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "image",
@@ -46,12 +46,12 @@ export default defineType({
       name: "repository",
       title: "Repository Link",
       type: "url",
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "link",
       title: "Live Link",
-      type: "url"
+      type: "url",
     }),
     defineField({
       name: "dateStart",
@@ -60,7 +60,7 @@ export default defineType({
       options: {
         dateFormat: "YYYY-MM",
       },
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "dateCompleted",
@@ -69,7 +69,7 @@ export default defineType({
       options: {
         dateFormat: "YYYY-MM",
       },
-      validation: rule => rule.min(rule.valueOfField("dateStart")),
+      validation: (rule) => rule.min(rule.valueOfField("dateStart")),
     }),
   ],
 });

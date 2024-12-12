@@ -7,7 +7,7 @@
     "strict": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": true
   },
   "exclude": ["node_modules"]
 }
