@@ -6,6 +6,13 @@ import { eslintConfigFrontend } from "./frontend/eslint.config.mjs";
 import { eslintConfigCms } from "./cms/eslint.config.mjs";
 
 export default [
+  {
+    rules: {
+      semi: ["error", "always"],
+      "no-console": ["warn", { allow: ["info", "error"] }],
+    },
+  },
+
   ...eslintConfigFrontend,
   ...eslintConfigCms,
 

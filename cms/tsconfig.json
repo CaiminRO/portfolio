@@ -1,9 +1,9 @@
 {
-  "extends":  "../tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "module": "Preserve",
-    "moduleDetection": "force",
+    "moduleDetection": "force"
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }
