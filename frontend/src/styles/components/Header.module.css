@@ -1,0 +1,15 @@
+.header {
+    @apply fixed top-0 left-0 right-0 bg-background shadow-md z-50
+}
+
+.navbar {
+    @apply container mx-auto flex justify-between items-center p-4
+}
+
+.linkHome {
+    @apply text-xl font-bold text-primary
+}
+
+.link {
+    @apply flex space-x-4 text-secondary hover:text-primary
+}
