@@ -3,8 +3,7 @@ import "@/styles/globals.css";
 import { ReactNode } from "react";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import {Personal} from "@/config";
-
+import { Personal } from "@/config";
 
 export const metadata: Metadata = {
   title: "CaiminRO | Portfolio",

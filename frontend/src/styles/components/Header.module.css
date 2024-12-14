@@ -1,15 +1,15 @@
 .header {
-    @apply fixed top-0 left-0 right-0 bg-background shadow-md z-50
+  @apply fixed left-0 right-0 top-0 z-50 bg-background shadow-md;
 }
 
 .navbar {
-    @apply container mx-auto flex justify-between items-center p-4
+  @apply container mx-auto flex items-center justify-between p-4;
 }
 
 .linkHome {
-    @apply text-xl font-bold text-primary
+  @apply text-xl font-bold text-primary;
 }
 
 .link {
-    @apply flex space-x-4 text-secondary hover:text-primary
+  @apply flex space-x-4 text-secondary hover:text-primary;
 }

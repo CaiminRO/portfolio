@@ -1,23 +1,23 @@
 .outer {
-    @apply bg-background py-6
+  @apply bg-background py-6;
 }
 
 .mainContainer {
-    @apply container mx-auto px-4 text-center
+  @apply container mx-auto px-4 text-center;
 }
 
 .socialContainer {
-    @apply flex justify-center space-x-6 mb-4
+  @apply mb-4 flex justify-center space-x-6;
 }
 
 .socialLink {
-    @apply text-primary hover:text-cyan-500
+  @apply text-primary hover:text-cyan-500;
 }
 
 .techStack {
-    @apply text-secondary text-sm
+  @apply text-sm text-secondary;
 }
 
 .copyright {
-    @apply text-secondary text-sm mt-2
+  @apply mt-2 text-sm text-secondary;
 }

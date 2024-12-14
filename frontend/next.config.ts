@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    optimizePackageImports: []
-  }
+    optimizePackageImports: [],
+  },
 };
 
 export default nextConfig;

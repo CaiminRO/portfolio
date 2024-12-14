@@ -1,5 +1,5 @@
-import {headerStyles} from "@/styles/components";
-import {Personal} from "@/config";
+import { headerStyles } from "@/styles/components";
+import { Personal } from "@/config";
 
 export default function Header() {
   return (
