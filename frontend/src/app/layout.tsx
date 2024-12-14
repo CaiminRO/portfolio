@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { ReactNode } from "react";
 import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 import {Personal} from "@/config";
 
 
@@ -21,6 +22,8 @@ export default function RootLayout({
         <Header />
 
         <main className="grow">{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
