@@ -1,6 +1,6 @@
 import { config as baseConfig } from "./base.js";
 
-export const config = {
+export const nextJsConfig = {
   ...baseConfig,
   plugins: ["prettier-plugin-tailwindcss"],
 }

@@ -1,7 +1,7 @@
 import studio from "@sanity/eslint-config-studio";
 import { config as baseConfig } from "./base.js";
 
-export const nextJsConfig = [
+export const sanityConfig = [
   ...baseConfig,
   ...studio,
   {
