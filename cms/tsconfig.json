@@ -1,9 +1,5 @@
 {
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "module": "Preserve",
-    "moduleDetection": "force"
-  },
+  "extends": "@repo/typescript-config/sanity.json",
+  "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
 }
