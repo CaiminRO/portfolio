@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "lint:check": "eslint .",
     "format:check": "prettier . --check",
     "build": "turbo build",
     "dev": "turbo dev",
