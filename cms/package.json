@@ -1,9 +1,10 @@
 {
-  "name": "portfolio-cms",
+  "name": "cms",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
-  "license": "UNLICENSED",
+  "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
@@ -25,6 +26,8 @@
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
-    "@sanity/eslint-config-studio": "^5.0.0"
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*"
   }
 }
