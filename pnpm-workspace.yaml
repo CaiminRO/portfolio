@@ -1,4 +1,3 @@
 packages:
-  - "cms"
-  - "frontend"
+  - "apps/*"
   - "packages/*"
