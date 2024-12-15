@@ -21,7 +21,7 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
 
-  cms:
+  apps/cms:
     dependencies:
       '@sanity/vision':
         specifier: ^3.67.1
@@ -41,15 +41,15 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../packages/eslint-config
+        version: link:../../packages/eslint-config
       '@repo/prettier-config':
         specifier: workspace:*
-        version: link:../packages/prettier-config
+        version: link:../../packages/prettier-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../packages/typescript-config
+        version: link:../../packages/typescript-config
 
-  frontend:
+  apps/web:
     dependencies:
       next:
         specifier: 15.1.0
@@ -66,13 +66,13 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../packages/eslint-config
+        version: link:../../packages/eslint-config
       '@repo/prettier-config':
         specifier: workspace:*
-        version: link:../packages/prettier-config
+        version: link:../../packages/prettier-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../packages/typescript-config
+        version: link:../../packages/typescript-config
       '@turbo/gen':
         specifier: ^2.3.3
         version: 2.3.3(@types/node@20.17.9)(typescript@5.7.2)
@@ -6715,7 +6715,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@portabletext/editor@1.15.3(@sanity/block-tools@3.67.1)(@sanity/schema@3.67.1)(@sanity/types@3.67.1(debug@4.4.0))(@types/react@18.3.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@portabletext/editor@1.15.3(@sanity/block-tools@3.67.1(debug@4.4.0))(@sanity/schema@3.67.1(debug@4.4.0))(@sanity/types@3.67.1(debug@4.4.0))(@types/react@18.3.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@portabletext/patches': 1.1.0
       '@sanity/block-tools': 3.67.1(debug@4.4.0)
@@ -10614,7 +10614,7 @@ snapshots:
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       '@juggle/resize-observer': 3.4.0
-      '@portabletext/editor': 1.15.3(@sanity/block-tools@3.67.1)(@sanity/schema@3.67.1)(@sanity/types@3.67.1(debug@4.4.0))(@types/react@18.3.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@portabletext/editor': 1.15.3(@sanity/block-tools@3.67.1(debug@4.4.0))(@sanity/schema@3.67.1(debug@4.4.0))(@sanity/types@3.67.1(debug@4.4.0))(@types/react@18.3.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@portabletext/react': 3.2.0(react@18.3.1)
       '@rexxars/react-json-inspector': 8.0.1(react@18.3.1)
       '@sanity/asset-utils': 2.2.1
