@@ -29,20 +29,18 @@ export const config = [
       "no-console": ["warn", { allow: ["info", "error"] }],
       "import/no-cycle": "error",
       "import/no-self-import": "error",
-      "import/order": ["error", {
-        groups: [
-          "builtin",
-          ["sibling", "parent"],
-          "index",
-          "object",
-        ],
-        "newlines-between": "always",
-        "warnOnUnassignedImports": true,
-        alphabetize: {
-          order: "asc",
-          caseInsensitive: true,
+      "import/order": [
+        "error",
+        {
+          groups: ["builtin", ["sibling", "parent"], "index", "object"],
+          "newlines-between": "always",
+          warnOnUnassignedImports: true,
+          alphabetize: {
+            order: "asc",
+            caseInsensitive: true,
+          },
         },
-      }],
+      ],
     },
   },
   {
