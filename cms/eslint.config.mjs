@@ -1,10 +1,3 @@
-import studio from "@sanity/eslint-config-studio";
+import { sanityConfig } from "@repo/eslint-config/sanity";
 
-const eslintConfigCms = [
-  ...studio,
-  {
-    ignores: ["**/.sanity/"],
-  },
-];
-
-export { eslintConfigCms };
+export default sanityConfig;

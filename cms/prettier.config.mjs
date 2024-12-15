@@ -1,6 +1,6 @@
-import rootConfig from "../prettier.config.mjs";
+import {config} from "@repo/prettier-config/base";
 
 export default {
-  ...rootConfig,
+  ...config,
   printWidth: 100,
 };

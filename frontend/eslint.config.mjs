@@ -1,10 +1,3 @@
-import tailwind from "eslint-plugin-tailwindcss";
+import { nextJsConfig } from "@repo/eslint-config/next-js"
 
-const eslintConfigFrontend = [
-  {
-    ignores: ["**/.next/"],
-  },
-  ...tailwind.configs["flat/recommended"],
-];
-
-export { eslintConfigFrontend };
+export default nextJsConfig;
