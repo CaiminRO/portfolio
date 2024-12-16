@@ -21,6 +21,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
+  const subjectDefault = "Contact Attempt via Portfolio";
+
   const {
     register,
     handleSubmit,
@@ -33,7 +35,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         email: string()
           .email("Invalid email format")
           .required("Email is required"),
-        subject: string().default("Contact Attempt via Portfolio"),
+        subject: string().default(subjectDefault),
         message: string().required("Message is required"),
       })
     ),
@@ -123,6 +125,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               id="subject"
               {...register("subject")}
               className={contactStyles.fieldInput}
+              defaultValue={subjectDefault}
             />
             {/* Subject Validation */}
             {errors.subject && <p className={contactStyles.fieldError}>{errors.subject.message}</p>}
