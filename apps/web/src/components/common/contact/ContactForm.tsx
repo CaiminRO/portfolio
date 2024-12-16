@@ -96,7 +96,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="text"
               id="name"
               {...register("name")}
-              className={contactStyles.fieldInput}
+              className={!errors.name ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
             />
             {/* Name Validation */}
             {errors.name && <p className={contactStyles.fieldError}>{errors.name.message}</p>}
@@ -110,7 +110,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="email"
               id="email"
               {...register("email")}
-              className={contactStyles.fieldInput}
+              className={!errors.email ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
             />
             {/* Email Validation */}
             {errors.email && <p className={contactStyles.fieldError}>{errors.email.message}</p>}
@@ -124,7 +124,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="text"
               id="subject"
               {...register("subject")}
-              className={contactStyles.fieldInput}
+              className={!errors.subject ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
               defaultValue={subjectDefault}
             />
             {/* Subject Validation */}
@@ -138,7 +138,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <textarea
               id="message"
               {...register("message")}
-              className={contactStyles.fieldInput}
+              className={!errors.message ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
               rows={4}
             />
             {/* Message Validation */}

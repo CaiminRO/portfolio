@@ -44,8 +44,14 @@
     @apply block text-secondary
 }
 
-.fieldInput {
-    @apply w-full rounded border border-secondary px-3 py-2 text-black bg-secondary
+.fieldInputBase {
+    @apply w-full rounded px-3 py-2 text-black bg-secondary
+}
+.fieldInputValid {
+    @apply fieldInputBase border border-primary
+}
+.fieldInputError {
+    @apply fieldInputBase border border-red-500
 }
 
 .fieldError {
