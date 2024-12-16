@@ -96,10 +96,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="text"
               id="name"
               {...register("name")}
-              className={!errors.name ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
+              className={
+                !errors.name
+                  ? contactStyles.fieldInputValid
+                  : contactStyles.fieldInputError
+              }
             />
             {/* Name Validation */}
-            {errors.name && <p className={contactStyles.fieldError}>{errors.name.message}</p>}
+            {errors.name && (
+              <p className={contactStyles.fieldError}>{errors.name.message}</p>
+            )}
           </div>
 
           <div>
@@ -110,10 +116,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="email"
               id="email"
               {...register("email")}
-              className={!errors.email ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
+              className={
+                !errors.email
+                  ? contactStyles.fieldInputValid
+                  : contactStyles.fieldInputError
+              }
             />
             {/* Email Validation */}
-            {errors.email && <p className={contactStyles.fieldError}>{errors.email.message}</p>}
+            {errors.email && (
+              <p className={contactStyles.fieldError}>{errors.email.message}</p>
+            )}
           </div>
 
           <div>
@@ -124,11 +136,19 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               type="text"
               id="subject"
               {...register("subject")}
-              className={!errors.subject ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
+              className={
+                !errors.subject
+                  ? contactStyles.fieldInputValid
+                  : contactStyles.fieldInputError
+              }
               defaultValue={subjectDefault}
             />
             {/* Subject Validation */}
-            {errors.subject && <p className={contactStyles.fieldError}>{errors.subject.message}</p>}
+            {errors.subject && (
+              <p className={contactStyles.fieldError}>
+                {errors.subject.message}
+              </p>
+            )}
           </div>
 
           <div>
@@ -138,11 +158,19 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <textarea
               id="message"
               {...register("message")}
-              className={!errors.message ? contactStyles.fieldInputValid : contactStyles.fieldInputError}
+              className={
+                !errors.message
+                  ? contactStyles.fieldInputValid
+                  : contactStyles.fieldInputError
+              }
               rows={4}
             />
             {/* Message Validation */}
-            {errors.message && <p className={contactStyles.fieldError}>{errors.message.message}</p>}
+            {errors.message && (
+              <p className={contactStyles.fieldError}>
+                {errors.message.message}
+              </p>
+            )}
           </div>
 
           {/* Submit Button */}
