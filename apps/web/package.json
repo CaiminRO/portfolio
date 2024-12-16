@@ -30,6 +30,8 @@
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
-    "@turbo/gen": "^2.3.3"
+    "@turbo/gen": "^2.3.3",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.1"
   }
 }

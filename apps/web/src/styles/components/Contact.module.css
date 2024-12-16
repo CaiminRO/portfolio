@@ -47,3 +47,7 @@
 .fieldInput {
     @apply w-full rounded border border-secondary px-3 py-2 text-black bg-secondary
 }
+
+.fieldError {
+    @apply mt-1 text-sm text-red-500
+}

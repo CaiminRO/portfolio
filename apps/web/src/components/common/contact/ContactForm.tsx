@@ -97,7 +97,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               className={contactStyles.fieldInput}
             />
             {/* Name Validation */}
-            {errors.name && <p>{errors.name.message}</p>}
+            {errors.name && <p className={contactStyles.fieldError}>{errors.name.message}</p>}
           </div>
 
           <div>
@@ -111,7 +111,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               className={contactStyles.fieldInput}
             />
             {/* Email Validation */}
-            {errors.email && <p>{errors.email.message}</p>}
+            {errors.email && <p className={contactStyles.fieldError}>{errors.email.message}</p>}
           </div>
 
           <div>
@@ -125,7 +125,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               className={contactStyles.fieldInput}
             />
             {/* Subject Validation */}
-            {errors.subject && <p>{errors.subject.message}</p>}
+            {errors.subject && <p className={contactStyles.fieldError}>{errors.subject.message}</p>}
           </div>
 
           <div>
@@ -139,7 +139,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               rows={4}
             />
             {/* Message Validation */}
-            {errors.message && <p>{errors.message.message}</p>}
+            {errors.message && <p className={contactStyles.fieldError}>{errors.message.message}</p>}
           </div>
 
           {/* Submit Button */}
