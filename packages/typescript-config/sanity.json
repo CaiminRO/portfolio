@@ -4,7 +4,8 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "module": "Preserve",
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "moduleResolution": "Node"
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
