@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, subject } = await request.json();
 
     // Basic validation
     if (!name || !email || !message) {
@@ -23,11 +23,9 @@ export async function POST(request: Request) {
       to: ResendUtil.Receiver.Email,
       subject: `New Contact Form Submission from ${name}`,
       text: `
-        You have a new contact form submission.
-
         Name: ${name}
         Email: ${email}
-
+        Subject: ${subject}
         Message:
         ${message}
       `,
@@ -35,6 +33,7 @@ export async function POST(request: Request) {
         <h1>New Contact Form Submission</h1>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
