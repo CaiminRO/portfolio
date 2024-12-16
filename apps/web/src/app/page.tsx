@@ -9,8 +9,8 @@ export default function Home() {
 
   return (
     <>
-      <Hero/>
-      <ContactButton onClick={() => setIsContactOpen(true)}/>
+      <Hero />
+      <ContactButton onClick={() => setIsContactOpen(true)} />
       <ContactForm
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}

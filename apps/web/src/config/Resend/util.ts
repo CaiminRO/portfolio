@@ -6,9 +6,9 @@ const resendInfo: ResendInfo = personal;
 export const Resend = {
   Sender: {
     Email: `${resendInfo.senderEmailIdentifier}@${resendInfo.senderEmailDomain || "resend.dev"}`,
-    Name: resendInfo.senderName
+    Name: resendInfo.senderName,
   },
   Receiver: {
-    Email: resendInfo.receiverEmail
-  }
+    Email: resendInfo.receiverEmail,
+  },
 };
