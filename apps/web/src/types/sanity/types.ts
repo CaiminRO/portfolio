@@ -68,6 +68,34 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type GameMod = {
+  _id: string;
+  _type: "gameMod";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  game?: string;
+  slug?: Slug;
+  description?: string;
+  technologies?: Array<string>;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  repository?: string;
+  downloadLink?: Array<string>;
+  dateStart?: string;
+  dateCompleted?: string;
+};
+
 export type Project = {
   _id: string;
   _type: "project";
@@ -164,6 +192,7 @@ export type AllSanitySchemaTypes =
   | SanityImageDimensions
   | SanityFileAsset
   | Geopoint
+  | GameMod
   | Project
   | SanityImageCrop
   | SanityImageHotspot
