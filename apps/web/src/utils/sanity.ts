@@ -8,9 +8,9 @@ const config: ClientConfig = {
   apiVersion: "2024-12-23",
 };
 
-export const client = createClient(config);
+export const sanityClient = createClient(config);
 
-const builder = imageUrlBuilder(client);
+const builder = imageUrlBuilder(sanityClient);
 
 export function urlFor(source: { asset: { url: string } }) {
   return builder.image(source);
