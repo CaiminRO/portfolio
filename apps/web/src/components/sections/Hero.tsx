@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="text-center">
         <h1 className={heroStyles.title}>{Personal.FullName}</h1>
         <p className={heroStyles.blurb}>
-          Full-Stack Developer | Backend Developer | Database Developer |
+          Full-Stack Developer | Backend Developer | Database Administrator |
           Application Developer | Video Game Mod Developer
         </p>
 
