@@ -5,9 +5,13 @@ import React from "react";
 export type SkillsProps = {
   skills: Skill[];
   limit?: number;
+  showAll?: boolean;
 };
 
-function Skills({ skills, limit = 5 }: SkillsProps) {
+function Skills({ skills, limit = 5, showAll = false }: SkillsProps) {
+  if (showAll)
+    limit = skills.length;
+
   const displayedSkills = skills.slice(0, limit);
   const hasMoreSkills = skills.length > limit;
 
@@ -23,7 +27,7 @@ function Skills({ skills, limit = 5 }: SkillsProps) {
       ))}
       {hasMoreSkills && (
         <span className={portfolioItemCardStyles.skill}>
-          +{skills.length - 5} more
+          +{skills.length - limit} more
         </span>
       )}
     </div>
