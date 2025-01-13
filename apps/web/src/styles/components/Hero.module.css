@@ -1,5 +1,5 @@
 .mainContainer {
-  @apply flex min-h-screen items-center justify-center bg-background pt-16;
+  @apply flex min-h-screen items-center justify-center bg-background;
 }
 
 .title {

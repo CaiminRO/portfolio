@@ -1,0 +1,15 @@
+.container {
+    @apply flex flex-wrap items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-md shadow-md mb-6
+}
+
+.filterContainer {
+    @apply flex flex-col
+}
+
+.filterInput {
+    @apply border border-gray-300 dark:border-gray-700 rounded-md px-2 py-1 text-primary
+}
+
+.filterLabel {
+    @apply font-semibold mb-1
+}

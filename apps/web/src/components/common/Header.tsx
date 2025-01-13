@@ -2,18 +2,23 @@ import { headerStyles } from "@/styles/components";
 import { Personal } from "@/config";
 
 export default function Header() {
+  const links = [
+    ["Portfolio", "/#portfolio"],
+    ["Resume", "/resume"],
+  ];
+
   return (
     <header className={headerStyles.header}>
       <nav className={headerStyles.navbar}>
-        <div className={headerStyles.linkHome}>{Personal.FullName}</div>
-
-        <div className={headerStyles.link}>
-          <a href="#">Temp Link</a>
+        <div className={headerStyles.linkHome}>
+          <a href="/">{Personal.FullName}</a>
         </div>
 
-        <div className={headerStyles.link}>
-          <a href="#">Temp Link 2</a>
-        </div>
+        {links.map(([text, href], idx) => (
+          <div key={idx} className={headerStyles.link} >
+            <a href={href}>{text}</a>
+          </div>
+        ))}
       </nav>
     </header>
   );

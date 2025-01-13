@@ -1,7 +1,6 @@
 import { footerStyles } from "@/styles/components";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Personal, Socials } from "@/config";
-import { SiCurseforge, SiNexusmods } from "react-icons/si";
+import LinkIcon from "@/components/common/LinkIcon";
 
 export default function Footer() {
   const yearStart = 2024;
@@ -14,34 +13,10 @@ export default function Footer() {
     <footer className={footerStyles.outer}>
       <div className={footerStyles.mainContainer}>
         <div className={footerStyles.socialContainer}>
-          <a
-            href={Socials.LinkedIn}
-            target="_blank"
-            className={footerStyles.socialLink}
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href={Socials.GitHub}
-            target="_blank"
-            className={footerStyles.socialLink}
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href={Socials.NexusMods}
-            target="_blank"
-            className={footerStyles.socialLink}
-          >
-            <SiNexusmods size={24} />
-          </a>
-          <a
-            href={Socials.CurseForge}
-            target="_blank"
-            className={footerStyles.socialLink}
-          >
-            <SiCurseforge size={24} />
-          </a>
+          <LinkIcon url={Socials.LinkedIn} size={24} />
+          <LinkIcon url={Socials.GitHub} size={24} />
+          <LinkIcon url={Socials.NexusMods} size={24} />
+          <LinkIcon url={Socials.CurseForge} size={24} />
         </div>
 
         <p className={footerStyles.techStack}>

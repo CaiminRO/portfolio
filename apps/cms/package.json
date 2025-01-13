@@ -13,19 +13,21 @@
     "deploy-graphql": "sanity graphql deploy",
     "extract": "sanity schema extract",
     "typegen": "sanity typegen generate",
-    "extract-typegen": "pnpm run extract && pnpm run typegen"
+    "extract-typegen": "pnpm run extract && pnpm run typegen",
+    "backup": "sanity dataset export production backup-export.tar.gz"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.67.1",
+    "@sanity/vision": "^3.69.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.67.1",
+    "sanity": "^3.69.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
+    "@types/react": "^18.0.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/prettier-config": "workspace:*"

@@ -1,0 +1,35 @@
+.container {
+    @apply relative w-full bg-transparent
+}
+
+.innerContainer {
+    @apply mx-auto max-w-7xl py-8 px-4
+}
+
+
+/* Item Grid */
+.gridContainer {
+    @apply relative flex gap-4
+}
+
+.gridItems {
+    @apply w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4
+}
+
+
+/* Sidebar of grid */
+.sidebarBase {
+    @apply w-1/3 sticky top-[80px] h-[calc(100vh-80px)] overflow-y-auto transition-opacity duration-300 border-l border-gray-300 dark:border-gray-700
+}
+
+.sidebarInView {
+    @apply sidebarBase opacity-100
+}
+
+.sidebarOutOfView {
+    @apply sidebarBase opacity-0 pointer-events-none
+}
+
+.sidebarPreSelect {
+    @apply p-4 text-sm text-gray-600 dark:text-gray-300
+}
