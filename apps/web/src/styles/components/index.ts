@@ -4,6 +4,7 @@ import heroStyles from "./Hero.module.css";
 import contactStyles from "./Contact.module.css";
 import linkIconStyles from "./LinkIcon.module.css";
 import portfolioItemCardStyles from "./PortfolioItemCard.module.css";
+import multiSelectStyles from "./MultiSelect.module.css";
 
 export {
   headerStyles,
@@ -12,4 +13,5 @@ export {
   contactStyles,
   linkIconStyles,
   portfolioItemCardStyles,
+  multiSelectStyles,
 };
