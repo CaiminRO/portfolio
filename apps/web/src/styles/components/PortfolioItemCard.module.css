@@ -1,0 +1,23 @@
+.container {
+    @apply border border-gray-300 dark:border-gray-700 p-4 rounded-md shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white dark:bg-slate-800
+}
+
+.title {
+    @apply text-xl font-bold mb-2
+}
+
+.generalText {
+    @apply text-sm mb-2
+}
+
+.skillContainer {
+    @apply flex flex-wrap gap-2 mb-2
+}
+
+.skill {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-2 py-1 rounded-full text-xs
+}
+
+.linkContainer {
+    @apply mb-4 flex justify-center space-x-6
+}
