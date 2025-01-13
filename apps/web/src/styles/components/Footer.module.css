@@ -10,10 +10,6 @@
   @apply mb-4 flex justify-center space-x-6;
 }
 
-.socialLink {
-  @apply text-primary hover:text-cyan-500;
-}
-
 .techStack {
   @apply text-sm text-secondary;
 }
