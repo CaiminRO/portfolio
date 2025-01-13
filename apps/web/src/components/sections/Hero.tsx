@@ -1,7 +1,14 @@
 import { heroStyles } from "@/styles/components";
-import { Personal } from "@/config";
+import { Personal, Socials } from "@/config";
 
 export default function Hero() {
+  const jumps = [
+    ["Projects", "/#portfolio"],
+    ["Resume", "/resume"],
+    ["LinkedIn", Socials.LinkedIn],
+    ["GitHub", Socials.GitHub],
+  ];
+
   return (
     <section id="hero" aria-label="Hero" className={heroStyles.mainContainer}>
       <div className="text-center">
@@ -12,12 +19,15 @@ export default function Hero() {
         </p>
 
         <div className={heroStyles.quickJumpContainer}>
-          <a href="#" className={heroStyles.quickJump}>
-            View Projects
-          </a>
-          <a href="#" className={heroStyles.quickJump}>
-            View Resume
-          </a>
+          {jumps.map(([text, href], idx) => (
+            <a
+              key={idx}
+              href={href}
+              className={heroStyles.quickJump}
+            >
+              View {text}
+            </a>
+          ))}
         </div>
       </div>
     </section>

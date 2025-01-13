@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import MultiSelect from "@/components/common/MultiSelect";
 import { Skill } from "@/types";
-import {filterBarStyles} from "@/styles/components";
+import { filterBarStyles } from "@/styles/components";
+
+type ItemTypeOptions = "all" | "project" | "mod";
 
 interface FilterBarProps {
   allSkills: Skill[];
   onSearchChange: (search: string) => void;
-  onTypeChange: (type: "all" | "project" | "mod") => void;
+  onTypeChange: (type: ItemTypeOptions) => void;
   onSkillsChange: (skills: string[]) => void;
 }
 
 export default function FilterBar ({ allSkills, onSearchChange, onTypeChange, onSkillsChange }: FilterBarProps) {
   const [search, setSearch] = useState("");
-  const [selectedType, setSelectedType] = useState<"all" | "project" | "mod">("all");
+  const [selectedType, setSelectedType] = useState<ItemTypeOptions>("all");
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +23,7 @@ export default function FilterBar ({ allSkills, onSearchChange, onTypeChange, on
   };
 
   const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value as "all" | "project" | "mod";
+    const value = e.target.value as ItemTypeOptions;
     setSelectedType(value);
     onTypeChange(value);
   };
