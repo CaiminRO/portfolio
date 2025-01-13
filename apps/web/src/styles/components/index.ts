@@ -5,6 +5,7 @@ import contactStyles from "./Contact.module.css";
 import linkIconStyles from "./LinkIcon.module.css";
 import portfolioItemCardStyles from "./PortfolioItemCard.module.css";
 import multiSelectStyles from "./MultiSelect.module.css";
+import filterBarStyles from "./FilterBar.module.css";
 
 export {
   headerStyles,
@@ -14,4 +15,5 @@ export {
   linkIconStyles,
   portfolioItemCardStyles,
   multiSelectStyles,
+  filterBarStyles,
 };
