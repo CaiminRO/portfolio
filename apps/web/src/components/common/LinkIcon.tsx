@@ -2,6 +2,7 @@ import { FaSteam } from "react-icons/fa6";
 import { SiCurseforge, SiNexusmods } from "react-icons/si";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { linkIconStyles } from "@/styles/components";
+import Link from "next/link";
 
 interface LinkIconProps {
   url: string;
@@ -24,13 +25,13 @@ export default function LinkIcon({ url, size = 20, styles = linkIconStyles.conta
   const icon = <IconType size={size} />;
 
   return (
-    <a
+    <Link
       href={url}
       target="_blank"
       rel="noopener noreferrer"
       className={styles}
     >
       {icon}
-    </a>
+    </Link>
   );
 }
