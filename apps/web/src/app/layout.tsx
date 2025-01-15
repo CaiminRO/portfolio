@@ -6,7 +6,7 @@ import Footer from "@/components/common/Footer";
 import { Personal } from "@/config";
 import { Analytics } from "@vercel/analytics/next";
 import CookieBanner from "@/components/common/CookieBanner";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import GAConsent from "@/components/common/GAConsent";
 
 export const metadata: Metadata = {
   title: "CaiminRO | Portfolio",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}/>}
+      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <GAConsent gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}/>}
 
       <body className={`flex min-h-screen flex-col antialiased`}>
         <Header />
