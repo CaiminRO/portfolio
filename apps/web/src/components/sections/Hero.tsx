@@ -1,5 +1,9 @@
+"use client";
 import { heroStyles } from "@/styles/components";
 import { Personal, Socials } from "@/config";
+
+import { GAUtil } from "@/utils/googleAnalytics";
+import Link from "next/link";
 
 export default function Hero() {
   const jumps = [
@@ -20,13 +24,14 @@ export default function Hero() {
 
         <div className={heroStyles.quickJumpContainer}>
           {jumps.map(([text, href], idx) => (
-            <a
+            <Link
               key={idx}
-              href={href}
+              href={href as string}
               className={heroStyles.quickJump}
+              onClick={()=> GAUtil.sendEvent('button_Hero', text)}
             >
               View {text}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
