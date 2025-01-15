@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import { Personal } from "@/config";
+import { Analytics } from "@vercel/analytics/next";
 import CookieBanner from "@/components/common/CookieBanner";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
 
         <Footer />
 
+        <Analytics />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <CookieBanner />}
       </body>
     </html>
