@@ -5,3 +5,4 @@ export * from "./sanity";
 export * from "./formatDate";
 export * from "./portfolio";
 export * from "./storage";
+export * from "./googleAnalytics";
