@@ -7,6 +7,7 @@ import { Personal } from "@/config";
 import { Analytics } from "@vercel/analytics/next";
 import CookieBanner from "@/components/common/CookieBanner";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "CaiminRO | Portfolio",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Footer />
 
         <Analytics />
+        <SpeedInsights />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <CookieBanner />}
       </body>
     </html>
