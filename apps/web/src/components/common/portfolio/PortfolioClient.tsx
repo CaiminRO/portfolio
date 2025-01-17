@@ -7,6 +7,7 @@ import PortfolioCard from "./PortfolioCard";
 import type { PortfolioItem, Skill } from "@/types";
 import DetailPanel from "@/components/common/portfolio/DetailPane";
 import { portfolioClientStyles } from "@/styles/components";
+import { AnalyticsUtil } from "@/utils";
 
 interface PortfolioSectionProps {
   items: PortfolioItem[];
@@ -56,6 +57,13 @@ export default function PortfolioClient({ items }: PortfolioSectionProps) {
       !selectedSkills.every((skill) => item.skills.some(t => t.name.includes(skill))));
   });
 
+  const handleCardOnClick = (item: PortfolioItem) => {
+    if (activeItem && activeItem.slug !== item.slug) {}
+      AnalyticsUtil.cardPortfolioItem(item.slug);
+
+    setActiveItem(item);
+  }
+
   return (
     <section
       ref={ref}
@@ -80,7 +88,7 @@ export default function PortfolioClient({ items }: PortfolioSectionProps) {
             {filteredItems.map((item, idx) => (
               <div
                 key={idx}
-                onClick={() => setActiveItem(item)}
+                onClick={() => handleCardOnClick(item)}
                 className="cursor-pointer"
               >
                 <PortfolioCard item={item} />
